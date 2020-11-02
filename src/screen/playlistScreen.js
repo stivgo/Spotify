@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './styles/playlistScreen.scss.scss'
+import './styles/playlistScreen.scss'
 
 class PlaylistScreen extends Component {
   render() {
