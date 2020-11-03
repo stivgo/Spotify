@@ -10,9 +10,9 @@ class Profile extends Component {
   render() {
     return (
       <div className="Profile row">
-        <h1>Mi perfil</h1>
+        <h1 className="center col s12 m6 l12">Mi perfil</h1>
 
-        <MediaBox
+        <MediaBox className="center "
           id="MediaBox_7"
           options={{
             inDuration: 275,
@@ -24,17 +24,17 @@ class Profile extends Component {
           }}
         >
         <img
-          className="circle responsive-img"
+          className="circle center responsive-img"
           alt="profile"
           src={this.state.imageProfile}
           width="200"
         />
         </MediaBox>
         <h2 className="center col s12 ">{this.state.userName}</h2>
-        <div className="pais">
-          <h2 className="center col s12">{this.state.country}</h2>
+        <div className="pais row center">
+          <h2 className="center col l1">{this.state.country}</h2>
           <img
-            className=" responsive-img"
+            className=" responsive-img col l1"
             alt="country"
             src={this.state.imageCountry}
             width="50"
