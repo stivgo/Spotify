@@ -4,7 +4,7 @@ import "materialize-css/dist/css/materialize.min.css";
 import "materialize-css"
 import { MediaBox } from "react-materialize";
 import userProfile from "../assets/img/user.png";
-const token ="BQDTYj-CLsddVBQit2urOeIfR-Ov5F4-XdVGjncgVC1RbLe-vBCmYyiePvIrgbV8BWdHYbqgKg6tZuzsYPB0AZO1u9XVLL7MHq2iwjeXMh0nqTN9nvqrctHoVp3OnaoXd6SaQiWxfH5mxGoYqw1GUmERoV5mrf2lBCapWZk8JLrLA9if1jwBArCf4qbULyLxWmpBss2G27RbXdfwcr_llU1sjR1KwmAPEsS13L4JRwWOWijncKzXPahVk2qFaEGKiwN3jqvO8dZrhu4reiNHmITIvIBt-mc1RABVoGW-9lw";
+import token from './APIcontroller'
 
 class Profile extends Component {
   render() {
@@ -25,7 +25,7 @@ class Profile extends Component {
         >
         <img
           className="circle responsive-img"
-          alt="image profile"
+          alt="profile"
           src={this.state.imageProfile}
           width="200"
         />
@@ -35,7 +35,7 @@ class Profile extends Component {
           <h2 className="center col s12">{this.state.country}</h2>
           <img
             className=" responsive-img"
-            alt="image country"
+            alt="country"
             src={this.state.imageCountry}
             width="50"
           />

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./styles/infoPlaylist.scss";
 import "materialize-css/dist/css/materialize.min.css";
-import { MediaBox } from "react-materialize";
+// import { MediaBox } from "react-materialize";
 import { Link } from "react-router-dom";
+import token from './APIcontroller'
 
-const token ="BQDTYj-CLsddVBQit2urOeIfR-Ov5F4-XdVGjncgVC1RbLe-vBCmYyiePvIrgbV8BWdHYbqgKg6tZuzsYPB0AZO1u9XVLL7MHq2iwjeXMh0nqTN9nvqrctHoVp3OnaoXd6SaQiWxfH5mxGoYqw1GUmERoV5mrf2lBCapWZk8JLrLA9if1jwBArCf4qbULyLxWmpBss2G27RbXdfwcr_llU1sjR1KwmAPEsS13L4JRwWOWijncKzXPahVk2qFaEGKiwN3jqvO8dZrhu4reiNHmITIvIBt-mc1RABVoGW-9lw";
 
 class InfoPlaylist extends Component {
   render() {
@@ -14,7 +14,7 @@ class InfoPlaylist extends Component {
         <div className="item-list">
           {this.state.list.map((obj, index) => {
             return (
-              <Link to={"/playlist/"+obj.name}>
+              <Link to={{pathname:"/playlist/"+obj.name,state:{id: obj.id,img:obj.images[0].url}}}>
                 <div>
                   <img
                     className=" responsive-img"
